@@ -226,7 +226,7 @@ app.post('/run-job/:id', async (req, res) => {
             // Store webhook failure info (could be extended to store in DB)
           }
         });
-      }, 10000); // 10 seconds
+      }, 3000); // 10 seconds
     });
   });
 });
