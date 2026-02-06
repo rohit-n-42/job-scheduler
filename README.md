@@ -399,8 +399,17 @@ For production, update `NEXT_PUBLIC_API_URL` to your deployed backend URL.
 ### Job Status Flow
 
 ```
-pending → running (10 seconds) → completed
+pending → running (3 seconds) → completed
 ```
+
+## AI tools
+
+### AI tools: Claude.ai Sonnet 4.5 
+### Prompt:
+```
+Help me build a mini job scheduling web application using next.js as frontend, tailwind CSS for styling, Node.js and Express for backend and SQLite for database. We need to create a job, view all jobs in a table, filter jobs by status and priority, run a job, view job details. A job should contain taskName, payload which is in json format and is flexible and provided by the user, priority and status which is pending, running or completed, and timestamps createdAt, updatedAt, completedAt. Create APIs to create Job API using POST /jobs, get Job details using GET /jobs and filter based on priority and status, get job details using GET /jobs/:id for complete information, run job API using POST /run-job/:id where initially the job is in pending state, and once job is running, it should be in running state for 10 seconds and then notify an external webhook which for now use a dummy url, and send a post request with the jobId, taskName, priority, payload, and completedAt time which is the current timestamp of once the task is complete. While a job is running, we cannot run the job once again, and if the webhook notification fails, show a log on the frontend saying job successful but webhook failed. Frontend should allow users to create a job with taskName as text, priority as dropdown from P1 to P4, payload as json text area, upon clicking submit button, validate if taskName is empty or not and if the json payload is valid, and send a notification if not.  Jobs should get updated and a toast message saying job created successfully. Please provide the code and details on how to deploy it on netlify or render, and also provide a readme file with tech stack, features, how to run locally.
+```
+It helped me with designing, backend logic and documentation.
 
 ## 🐛 Troubleshooting
 
