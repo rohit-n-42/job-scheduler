@@ -1,0 +1,18 @@
+# dependencies
+/node_modules
+
+# database
+*.db
+*.sqlite
+*.sqlite3
+
+# environment
+.env
+.env.local
+
+# logs
+*.log
+npm-debug.log*
+
+# misc
+.DS_Store
